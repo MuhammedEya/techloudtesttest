@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="bubbles-container"></div>
+    <nav id="nav" class="relative bg-white">
+      <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+        <div class="flex items-center justify-between">
+          <div class="text-4xl font-extrabold gradient-text">
+            TechLoud
+          </div>
+    
+           <!-- Mobile menu button -->
+          <div class="flex lg:hidden">
+            <button id="openBtn" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                </svg>
+            </button>
+    
+            <button id="closeBtn" type="button" class="hidden text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center" dir="rtl">
+          <div class="flex flex-col md:flex-row md:mx-6">
+            <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-900 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#services">שירותים</a>
+            <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-900 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#steps">שלבים</a>
+            <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-900 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#contact">צור קשר</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+
+    <div class="container mx-auto flex flex-wrap items-center pb-2 pt-10 justify-center sm:pb-20 sm:pt-20" dir="rtl">
+      <div class="grid mx-auto max-w-xs sm:max-w-2xl w-full md:w-auto mb-10 sm:mb-20 pb-20">
+        <p class="ptyping mx-auto max-w-xs sm:max-w-xl   md:text-8xl h-16 sm:h-24 not-italic font-bold text-center sm:text-right text-black">אנחנ בונים<br>
+          <span class=" mx-auto max-w-xs sm:max-w-xl  md:text-8xl h-16 sm:h-24 not-italic font-bold text-center sm:text-right text-black typing-animation"></span></p>
+      </div>
+      <div class="pb-10 w-full sm:w-auto">
+        <img src='https://i.postimg.cc/J0mDLr09/sdafasdfasdfsadf-1.png' border='0' alt='sdafasdfasdfsadf-1' class="w-full h-auto sm:h-full sm:w-auto"/>
+      </div>
+    </div>
+    <div class="flex flex-wrap container mx-auto mt-16 items-stretch" dir="rtl" id="services">
+        <div class="w-full p-4">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 justify-center">שירותים</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="flex flex-col bg-white p-4 mb-4 rounded-lg shadow">
+                    <div class="flex-grow">
+                        <div class="flex items-center justify-center">
+                            <img src='https://i.postimg.cc/k4HgwWtM/artpcui-svgrepocom.png' border='0' alt='artpcui-svgrepocom' class="w-32 h-32"/>
+                        </div>
+                        <div class="text-lg font-semibold not-italic my-4" style="text-align: center;">עיצוב UI UX</div>
+                        <div class="text-lg font-semibold not-italic my-2 mx-4" style="text-align: center;">אנו מספקים עיצובים מותאמים אישית המשתלבים בצורה חלקה עם הטכנולוגיות העדכניות ביותר על מנת להבטיח שהנוכחות שלך באינטרנט תיראה מקצועית ועדכנית.</div>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-white p-4 mb-4 rounded-lg shadow">
+                    <div class="flex-grow">
+                        <div class="flex items-center justify-center">
+                            <img src='https://i.postimg.cc/3w48NdcP/loginpage-svgrepocom.png' border='0' alt='loginpage-svgrepocom' class="w-32 h-32"/>
+                        </div>
+                        <div class="text-lg font-semibold not-italic my-4" style="text-align: center;">דפי נחיתה</div>
+                        <div class="text-lg font-semibold not-italic my-2 mx-4" style="text-align: center;">אנו מבינים כמה חשוב לעשות רושם ראשוני נהדר כאשר משתמש נוחת באתר שלך. אנו מעצבים ומפתחים ממשקים אלגנטיים ואינטראקטיביים המותאמים לצרכי המותג שלך, והופכים את המבקרים ללקוחות!.</div>
+ </div>
+</div>
+<div class="flex flex-col bg-white p-4 mb-4 rounded-lg shadow">
+<div class="flex-grow">
+<div class="flex items-center justify-center">
+<img src='https://i.postimg.cc/jdMthHVp/websiteseopromotion-svgrepocom.png' border='0' alt='websiteseopromotion-svgrepocom' class="w-32 h-32"/>
+</div>
+<div class="text-lg font-semibold not-italic my-4" style="text-align: center;">אתרי תדמית</div>
+<div class="text-lg font-semibold not-italic my-2 mx-4" style="text-align: center;">ב-TechLoud, אנו גאים בצוות הסופר מוכשר שלנו של מפתחי אתרים שהמשימה שלהם היא לכתוב ולעצב קוד חזק, ליצור אתרים נקיים ואינטואיטיביים הבולטים בתעשייה שלהם.</div>
+</div>
+</div>
+<div class="flex flex-col bg-white p-4 mb-4 rounded-lg shadow">
+    <div class="flex-grow">
+      <div class="flex items-center justify-center">
+        <img src='https://i.postimg.cc/qvg0DN4z/onlineshop-svgrepocom.png' border='0' alt='onlineshop-svgrepocom' class="w-32 h-32"/>
+      </div>
+      <div class="text-lg font-semibold not-italic my-4" style="text-align: center;">חנות וירטואלית</div>
+      <div class="text-lg font-semibold not-italic my-2 mx-4" style="text-align: center;"> נצל את היתרונות של פתרון המסחר האלקטרוני המפתח שלנו המכסה את כל ההיבטים של הקמת חנות מקוונת - קטלוג מוצרים, קשרי לקוחות, אופטימיזציות שיווקיות, אנליטיקה ועוד!.</div>
+    </div>
+  </div>
+  <div class="flex flex-col bg-white p-4 mb-4 rounded-lg shadow">
+    <div class="flex-grow">
+      <div class="flex items-center justify-center">
+        <img src='https://i.postimg.cc/FRX4KGcL/Group.png' border='0' alt='Group' class="w-32 h-32"/>
+      </div>
+      <div class="text-lg font-semibold not-italic my-4" style="text-align: center;">מערכות ניהול</div>
+      <div class="text-lg font-semibold not-italic my-2 mx-4" style="text-align: center;">אנו מפתחים מערכות ניהול מותאמות אישית אשר הופכות את החיים לקלים יותר עבורך ועבור הצריכים שלך.</div>
+    </div>
+  </div>
+  <div class="flex flex-col bg-white p-4 mb-4 rounded-lg shadow">
+    <div class="flex-grow">
+      <div class="flex items-center justify-center">
+        <img src='https://i.postimg.cc/26dfLvFX/websitecloudstorage-svgrepocom.png' border='0' alt='websitecloudstorage-svgrepocom' class="w-32 h-32"/>
+      </div>
+      <div class="text-lg font-semibold not-italic my-4" style="text-align: center;">אפליקציות מבוססות ענן</div>
+      <div class="text-lg font-semibold not-italic my-2 mx-4" style="text-align: center;">לא משנה אם מדובר בפיתוח מוצרחדש או מודרניזציה של הקיים שלכם, הצוות שלנו יכול לעזור לכם לבנות יישומי ענן אמינים תוך מחשבה על ביצועים ומדרגיות.</div>
+</div>
+
+  </div>
+</div>
+
+</div>
+</div>
+      <div class=" py-12" dir="rtl" id="steps">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">שלבים</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="relative rounded-lg shadow-lg bg-white">
+              <img src="./1.svg" alt="Step 1" class="w-full h-auto object-cover rounded-lg mb-4">
+              <div class=" p-6 rounded-lg ">
+                <div class="text-lg font-semibold text-gray-800 ">
+                  <span class="inline-block bg-indigo-500 text-white px-3 py-1 rounded-full ml-2">1</span>ראיון אישי
+                </div>
+                <div class="text-gray-600 mt-2">
+                  ראשית, יהיה לך ראיון אישי משלך המותאם לצרכים שלך כך שנפתח אתר/מערכת שעונה על המפרט המדויק שלך
+                </div>
+              </div>
+            </div>
+            <div class="relative pt-3 rounded-lg shadow-lg bg-white">
+              <img src="./2.svg" alt="Step 2" class="w-full h-auto object-cover rounded-lg mb-4">
+              <div class=" p-6 rounded-lg ">
+                <div class="text-lg font-semibold text-gray-800">
+                  <span class="inline-block bg-indigo-500 text-white px-3 py-1 rounded-full ml-2">2</span>עיצוב ואפיון
+                </div>
+                <div class="text-gray-600 mt-2">
+                  בשלב הזה צוות העיצוב והאפיון המומחה שלנו יעצב המראה והתחושה המושלמים עבור האתר או המערכת שלכם                </div>
+              </div>
+            </div>
+            <div class="relative rounded-lg shadow-lg bg-white">
+              <img src="./3.svg" alt="Step 3" class="w-full h-auto object-cover rounded-lg mb-4">
+              <div class=" p-6 rounded-lg ">
+                <div class="text-lg font-semibold text-gray-800">
+                  <span class="inline-block bg-indigo-500 text-white px-3 py-1 rounded-full ml-2">3</span>פיתוח האתר
+                </div>
+                          <div class="text-gray-600 mt-2">
+                            בשלב זה, צוות הפיתוח שלנו יעבוד בהתאם לצרכים המדויקים שלכם ויבצע את הקידוד והבנייה של האתר או המערכת שלכם בצורה הכי מקצועית ויצירתית              </div>
+              </div>
+            </div>
+            <div class="relative pt-12 rounded-lg shadow-lg bg-white">
+              <img src="./4.svg" alt="Step 4" class="w-full h-auto object-cover rounded-lg mb-4">
+              <div class=" p-6 rounded-lg ">
+                <div class="text-lg font-semibold text-gray-800">
+                  <span class="inline-block bg-indigo-500 text-white px-3 py-1 rounded-full ml-2">4</span>תוצאה סופית
+                </div>
+                          <div class="text-gray-600 mt-2">
+                            אחרי תהליך מקצועי של עיצוב, אפיון ופיתוח מותאם אישית, אנחנו מתרגשים לבשר לכם שהאתר שלכם מוכן לצאת לאוויר!        
+                           </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 py-20" dir="rtl" id="contact">
+      <h1 class="text-4xl font-bold mb-12 text-black text-center">צור קשר</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Get in touch form box -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-bold mb-6 gradient-text">בואו נצא לדרך</h2>
+          <form>
+            <div class="mb-4">
+              <label class="block text-gray-700">שם \ שם העסק</label>
+              <input class="w-full px-3 py-2 mt-1 border border-purple-300 rounded focus:outline-none focus:border-purple-500" type="text" placeholder="שם">
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700">דואר אלקטרוני</label>
+              <input class="w-full px-3 py-2 mt-1 border border-purple-300 rounded focus:outline-none focus:border-purple-500" type="email" placeholder="דואר אלקטרוני">
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700">באיזה שירות את/ה מעוניין</label>
+              <select class="w-full px-3 py-2 mt-1 border border-purple-300 rounded focus:outline-none focus:border-purple-500">
+                <option value="ui-ux">UI/UX עיצוב</option>
+                <option value="web-dev">פיתוח אתרים</option>
+                <option value="app-dev">פיתוח אפליקציות</option>
+                <option value="sys-dev">פיתוח מערכות</option>
+                <option value="cloud-dev">אפליקציות ביסוס ענן</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700">פירוט</label>
+              <textarea class="w-full px-3 py-2 mt-1 border border-purple-300 rounded focus:outline-none focus:border-purple-500" rows="4" placeholder="יש משהו נוסף שאתה רוצה לספר לנו ?"></textarea>
+            </div>
+            <button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 focus:outline-none transition duration-200" type="submit">שלח</button>
+          </form>
+        </div>
+        <!-- WhatsApp box -->
+  <!-- WhatsApp box -->
+  <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col items-center">
+    <div class="text-green-500 mb-6">
+      <i class="fab fa-whatsapp fa-5x"></i>
+    </div>
+    <h2 class="text-3xl font-bold mb-6 text-green-600">צור קשר בוואטסאפ</h2>
+    <button class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 focus:outline-none transition duration-200" onclick="window.open('https://wa.me', '_blank')">העביר לוואטסאפ</button>
+    <img src="https://i.postimg.cc/Vs3FqB1f/174879.png" alt="Step 4" class="w-88 h-96 object-cover rounded-lg pt-10">
+  </div>
+      </div>
+    <footer class="footer" style="margin-top: 50px; text-align: center;">
+  <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://TechLoud.co.il/" class="hover:underline">TechLoud™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+ </body>
+</html>
+
